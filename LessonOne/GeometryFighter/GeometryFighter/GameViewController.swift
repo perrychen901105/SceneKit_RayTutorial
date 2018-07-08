@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
         setupView()
         setupScene()
         setupCamera()
+        spawnShape()
     }
     
     override var shouldAutorotate: Bool {
@@ -33,6 +34,12 @@ class GameViewController: UIViewController {
     
     func setupView() {
         scnView = self.view as! SCNView
+        
+        scnView.showsStatistics = true
+        
+        scnView.allowsCameraControl = true
+        
+        scnView.autoenablesDefaultLighting = true
     }
     
     func setupScene() {
